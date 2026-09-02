@@ -2,7 +2,7 @@
  * @author Jon Mrowczynski
  */
 void main() {
-    final var nullString = null;
+    final String nullString = null;
     IO.println("""
             Null checks:
                 %b
