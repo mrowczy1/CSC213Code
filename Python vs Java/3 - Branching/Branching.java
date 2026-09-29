@@ -39,18 +39,20 @@ void main() {
  * Java jas more standard switch expression that has grown relatively powerful with recent versions.
  */
 void switchExpressionExample() {
-    var pattern = "Set me to another String";
+    var pattern = "World!";
+    final String result; // ???
     switch(pattern) {
         case "Hello":
-            IO.println("Do something here if String is \"Hello\".");
+            result = "Do something here if String is \"Hello\".";
             break; // An explicit break statement is required to stop potentially running more cases.
         case "World!":
-            IO.println("Do something here is String is \"World!\".");
+            result = "Do something here if String is \"World!\".";
             break;
         default:
-            IO.println("This is run if pattern doesn't match any other case.");
+            result = "This is run if pattern doesn't match any other case.";
             // Don't need to explicitly break default.
     }
+    IO.println(result);
 }
 
 /**
@@ -60,9 +62,9 @@ void switchExpressionExample() {
 void switchStatementExample() {
     var pattern = "Set me to something";
     var result = switch(pattern) {
-        case "Hello" -> 1;
-        case "World!" -> 2;
-        default -> 3;
+        case "Hello" -> "Do something here is String is \"Hello\".";
+        case "World!" -> "Do something here if String is \"World!\".";
+        default -> "This is run if pattern doesn't match any other case.";
     };
     IO.println(result); // The value of result depends on the value of pattern!
 }

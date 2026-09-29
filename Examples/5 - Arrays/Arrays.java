@@ -80,7 +80,7 @@ void printMatrix(int[][] matrix) {
 }
 
 /**
- * Can iterate over arrays and Iterables, but can only be used to iterate! Modifying the lop variable just modifies
+ * Can iterate over arrays and Iterables, but can only be used to iterate! Modifying the loop variable just modifies
  * the copy of the value, not the value in the array itself! So, you can't modify the array with a for-each loop!
  * 
  * @param doubles the array being iterated over.

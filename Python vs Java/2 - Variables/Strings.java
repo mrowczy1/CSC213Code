@@ -8,12 +8,12 @@
  * @author Jon Mrowczynski
  */
 void main() {
-    stringConcatenation();
-    integerStringFormatting();
-    floatStringFormatting();
-    stringMethodsExamples();
-    stringComparisonExamples();
-    textBlockExample();
+    // stringConcatenation();
+    // integerStringFormatting();
+    // floatStringFormatting();
+    // stringMethodsExamples();
+    // stringComparisonExamples();
+    // textBlockExample();
 }
 
 /**
@@ -34,7 +34,7 @@ void stringConcatenation() {
  */
 void integerStringFormatting() {
     IO.println("Integer String Formatting Examples:");
-    var myInt = 15; // Change me!
+    var myInt = 404; // Change me!
     IO.println("Printing an int: %d".formatted(myInt));
     IO.println("Printing the same int in hex: %x".formatted(myInt));
     IO.println("Printing a large int with digit groupings: %,d".formatted(1_000_000_000));
@@ -113,6 +113,5 @@ void printMenuSimple() {
                     2. For Option 2.
                     3. For Option 3.
                     4. To Quit.
-            Input:
-            """);
+            Input: """);
 }
