@@ -16,6 +16,10 @@ void main() {
     IO.println();
 
     passByValueObjectReferenceExample();
+
+    IO.println();
+
+    overloadedExample();
 }
 
 /**
@@ -113,4 +117,19 @@ int[] add2Wrong(int[] arr) {
  */
 void add2Correct(final int[] ints) {
     for (var i = 0; i < ints.length; ++i) { ints[i] += 2; }
+}
+
+void overloadedExample() {
+    min(2, 3);
+    min(2.0, 3.0);
+}
+
+int min(int x, int y) { 
+    IO.println("I am in the int min!");
+    return x < y ? x : y; 
+}
+
+double min(double x, double y) { 
+    IO.println("I am in the double min!");
+    return x < y ? x : y; 
 }
