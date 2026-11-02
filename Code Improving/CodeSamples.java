@@ -46,11 +46,12 @@ void oddNumbers2() {
 /**
  * Finding the minimum value in nums.
  */
-void findMin(int[] nums) {
+int findMin(int[] nums){
     int min = Integer.MAX_VALUE;
     for (int num : nums) { 
         if (num < min) { min = num; }
     }
+    return min;
 }
 
 /**
