@@ -28,8 +28,9 @@ final String DEFAULT_MSG = "Encountered unhandled Day! :O";
  * 
  * @author Jon Mrowczynski
  */
-enum DaySimple { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY; }
-
+enum DaySimple { 
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY; 
+};
 void main() {
     IO.println("Printing all possible values of " + DaySimple.class.getSimpleName() +":");
     for (var day : DaySimple.values()) { 
@@ -119,7 +120,7 @@ void switchExpressionWithVoidReturn(DaySimple day) {
         case FRIDAY -> IO.println(FRIDAY_MSG);
         case SATURDAY, SUNDAY -> IO.println(WEEKEND_MSG);
         // Not needed if there is a case for all possible values! 
-        // Although good to have in case the enum is expanded later in development.
+        // Although good to have just in case (see what I did there?) the enum is expanded later in development.
         default -> IO.println(DEFAULT_MSG);
     }
 }
