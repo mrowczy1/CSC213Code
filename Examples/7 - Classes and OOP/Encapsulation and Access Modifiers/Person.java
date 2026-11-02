@@ -3,6 +3,8 @@
  */
 public class Person {
 
+    static myVar = 1;
+
     /*
         Access Modifiers:
 
@@ -19,21 +21,34 @@ public class Person {
         - Almost always should make instance fields private. Rather, we want to encapsulate an object's data such
           that it can't be directly accessed outside of the object instance.
     */
+
+   void main() {
+       var alice = new Person("Alice", "Smith");
+       IO.println(alice.getFirstName());
+       var bob = new Person("Bob", "Smith");
+       IO.println(bob.getFirstName());
+   }
     
+    private static int numOfPersons = 10;
+
     /**
      * The person's first name.
      */
-    private final String firstName; // This is constant. Once set in the constructor, it's value can't change.
+    private String firstName; // This is constant. Once set in the constructor, it's value can't change.
 
     /**
      * The person't last name.
      */
-    private final String lastName; // This is constant. Once set in the constructor, it can't be changed.
+    private String lastName; // This is constant. Once set in the constructor, it can't be changed.
 
     /**
      * The person's age.
      */
     private int age; // This is variable. It can be changed at any point in the program with the setter!
+
+    public Person() {
+
+    }
 
     /**
      * Creates a new {@code Person} with the given first and last name.
@@ -41,8 +56,8 @@ public class Person {
      * @param firstName the Person's first name.
      * @param lastName the Person's last name.
      */
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
+    public Person(String first, String lastName) {
+        firstName = first;
         this.lastName = lastName;
         // Since age is not set, the default value of an int, 0, is used.
         // Depending on your specific implementation, it probably makes more sense to set a default value of -1, though!
