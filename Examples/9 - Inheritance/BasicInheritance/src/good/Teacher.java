@@ -1,5 +1,7 @@
 package good;
 
+import fine.Person;
+
 /**
  * Good implementation of Teacher. Reuses existing code! Just need to add new stuff.
  *

@@ -1,4 +1,4 @@
-package bad;
+package fine;
 
 /**
  * @author Jon Mrowczynski
