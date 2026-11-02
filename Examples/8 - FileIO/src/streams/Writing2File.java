@@ -56,6 +56,7 @@ public class Writing2File {
 	 *               existing contents.
 	 */
 	private static void writingWithTryWithResources(boolean append) {
+		// Just like Python's with open as file statement.
 		try (var writer = new PrintWriter(new FileOutputStream(FILE_NAME, append))) {
 			writer.println("Hello World!");
 		}
