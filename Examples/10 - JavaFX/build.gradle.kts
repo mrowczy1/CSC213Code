@@ -12,6 +12,6 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(25))
 application.mainClass = "JavaFXExamples"
 
 javafx {
-    version = "25"
+    version = "25.0.2"
     modules("javafx.controls", "javafx.fxml")
 }

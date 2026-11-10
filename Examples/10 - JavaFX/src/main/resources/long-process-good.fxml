@@ -11,13 +11,11 @@
 <Scene xmlns:fx="http://javafx.com/fxml"
        xmlns="http://javafx.com/javafx"
        fx:controller="controllers.MultithreadedExample">
-	<VBox alignment="CENTER" spacing="15">
-		<padding>
-			<Insets topRightBottomLeft="15"/>
-		</padding>
-		<fx:define>
-			<Font fx:id="largeFont" size="20"/>
-		</fx:define>
+	<fx:define>
+		<Insets fx:id="insets" topRightBottomLeft="15"/>
+		<Font fx:id="largeFont" size="20"/>
+	</fx:define>
+	<VBox alignment="CENTER" spacing="15" padding="$insets">
 		<Button fx:id="button" text="Run Long Process" textAlignment="CENTER" font="$largeFont"
 		        onAction="#handleLongProcess"/>
 		<HBox alignment="CENTER" spacing="15">
