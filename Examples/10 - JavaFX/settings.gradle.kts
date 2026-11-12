@@ -1,1 +1,1 @@
-rootProject.name = "12 - JavaFX"
+rootProject.name = "10 - JavaFX"

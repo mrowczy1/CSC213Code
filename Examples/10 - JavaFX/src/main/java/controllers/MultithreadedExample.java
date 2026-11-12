@@ -25,8 +25,7 @@ public class MultithreadedExample {
 	private final Runnable runnable = () -> {
 		// Simulate running a long process. Here this process takes 5s.
 		try { Thread.sleep(10_000); }
-		catch (InterruptedException e) { throw new RuntimeException(e); }
-		
+		catch (final InterruptedException e) { throw new RuntimeException(e); }
 		Platform.runLater(() -> isRunning(false));
 	};
 	

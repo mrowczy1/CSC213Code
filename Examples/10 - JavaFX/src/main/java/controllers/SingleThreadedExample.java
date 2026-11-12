@@ -21,7 +21,7 @@ public class SingleThreadedExample {
 		
 		// Simulate running a long process. Here this process takes 5s.
 		try { Thread.sleep(10_000); }
-		catch (InterruptedException e) { throw new RuntimeException(e); }
+		catch (final InterruptedException e) { throw new RuntimeException(e); }
 		
 		isRunning(false);
 	}

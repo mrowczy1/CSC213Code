@@ -1,8 +1,6 @@
-/**
- * @author Jon Mrowczynski
- */
 final String FILE_NAME = "writtenData.txt";
 
+// Prevent NullPointerExceptions!
 Optional<int[]> add3(int[] myInts) {
 	if (myInts == null) { return Optional.empty(); }
 	for (var i = 0; i < myInts.length; ++i) { myInts[i] += 3; }
@@ -73,8 +71,10 @@ void uncheckedException() {
 	final var scanner = new Scanner(System.in);
 	try {
 		final var myInt = scanner.nextInt();
-		IO.println("After input.");
+		IO.println("Read int: " + myInt);
 	}
-	catch (InputMismatchException e) { IO.println("do a thing here."); }
-	catch (NoSuchElementException e) { IO.println("do another thing here"); }
+	// These are unchecked exceptions that scanner.nextInt() could throw.
+	catch (InputMismatchException e) { IO.println("Caught the InputMismatchException."); }
+	catch (NoSuchElementException e) { IO.println("Caught the NoSuchElementException."); }
+	catch (IllegalArgumentException e) { IO.println("Caught the IllegalArgumentException."); }
 }
