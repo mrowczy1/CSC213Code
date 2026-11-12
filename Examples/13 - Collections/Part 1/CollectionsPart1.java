@@ -127,8 +127,7 @@ void MapExamples() {
 
 /**
  * Similar to the utility class {@link Arrays} that contains a bunch of helper functions that helps us work with
- * arrays, we
- * have a utility class called {@link Collections} that helps us work with collections!
+ * arrays, we have a utility class called {@link Collections} that helps us work with collections!
  */
 void CollectionsExamples() {
 	IO.println("In CollectionsExamples:");
