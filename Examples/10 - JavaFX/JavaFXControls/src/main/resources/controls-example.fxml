@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.text.Font?>
+<Scene xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+       fx:controller="controllers.ControlsExampleController">
+    <fx:define>
+        <Font fx:id="mediumFont" size="25"/>
+        <Insets fx:id="insets" topRightBottomLeft="15"/>
+    </fx:define>
+    <VBox alignment="CENTER" spacing="25" padding="$insets" prefWidth="300">
+        <Text fx:id="text" text="Peek-a-boo!" textAlignment="CENTER" font="$mediumFont" visible="false"/>
+        <!-- Not every Control needs an fx:id -->
+        <Button text="Press Me" textAlignment="CENTER" onAction="#handleButtonPress"/>
+        <ToggleButton fx:id="toggleButton" text="Show Text" textAlignment="CENTER" onAction="#handleToggle"/>
+        <CheckBox fx:id="checkBox" text="I am a CheckBox" textAlignment="CENTER" onAction="#handleSelection"/>
+        <Slider fx:id="slider" onMouseDragged="#handleMouseDragged"/>
+        <Spinner fx:id="spinner" initialValue="0" min="0" max="7" onMouseClicked="#handleMouseClicked"/>
+    </VBox>
+</Scene>
