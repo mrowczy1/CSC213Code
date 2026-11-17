@@ -38,10 +38,6 @@ void main() {
 			           Short average: %f
 			           Int average: %f
 			           Double average: %f""".formatted(shortsAverage, intsAverage, doublesAverage));
-	
-	// Show generic example.
-	
-	// Show self-referential
 }
 
 <T extends Number> double average(List<T> list) {
